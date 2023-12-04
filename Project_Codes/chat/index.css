@@ -1,0 +1,577 @@
+
+
+#join_button.enabled {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* Style for the chat container */
+#chat_container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the inner container of the chat */
+#chat_inner_container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for the chat content container */
+#chat_content_container {
+  padding: 15px;
+  overflow-y: auto;
+  max-height: 400px; /* Adjust as needed */
+}
+
+/* Style for the chat input container */
+#chat_input_container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Style for the chat input */
+#chat_input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Style for the chat input send button */
+#chat_input_send {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for the chat input send button */
+#chat_input_send:hover {
+  background-color:transparent;
+  transform: scale(1.05);
+}
+
+/* Style for the enabled state of the chat input send button */
+#chat_input_send.enabled {
+  background-color: #0056b3;
+}
+
+/* Style for the chat logout container */
+#chat_logout_container {
+  margin-top: 10px;
+}
+
+/* Style for the chat logout button */
+#chat_logout {
+  background-color: #ff6262;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for the chat logout button */
+#chat_logout:hover {
+  background-color: #ff4747;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the container holding the chat logout button */
+#chat_logout_container {
+  margin-top: 20px;
+}
+
+/* Style for the chat logout button */
+#chat_logout {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for the chat logout button */
+#chat_logout:hover {
+  background-color: #00b37a;
+  transform: scale(1.05); /* Scale up the button on hover */
+}
+
+/* Active effect for the chat logout button (when clicked) */
+#chat_logout:active {
+  transform: scale(0.95); /* Scale down the button when clicked */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the outer container of each message */
+.message_container {
+  margin: 10px 0;
+}
+
+/* Style for the inner container of each message */
+.message_inner_container {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Style for the container holding the user information in each message */
+.message_user_container {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  flex: 1;
+}
+
+/* Style for the username in each message */
+.message_user {
+  margin: 0;
+}
+
+/* Style for the container holding the message content in each message */
+.message_content_container {
+  padding: 10px;
+  flex: 3;
+}
+
+/* Style for the message content in each message */
+.message_content {
+  margin: 0;
+}
+
+/* Media query for responsiveness (adjust as needed) */
+@media screen and (max-width: 600px) {
+  .message_inner_container {
+      flex-direction: column;
+  }
+  .message_user_container,
+  .message_content_container {
+      flex: unset;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    /* https://www.color-hex.com/color/d3d3d3 */
+    background-color: #fff; /*#f6f6f6, EBEBD3, fafafa*/
+    font-family: Bungee Outline;
+    font-weight: 900;
+  
+    overflow: hidden;
+    animation: blur 0.5s ease-out;
+  
+  }
+  *{
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #title_container{
+    width: 100%;
+    height: 225px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #6559e6d2;/*#467599;*/
+    border-bottom: 5px solid #fff;
+    box-shadow: 0 0 30px -18px #D64045;
+  
+  }
+  #title_inner_container{
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* background-color: #083D77; */
+    border-radius: 200px;
+  }
+  #title{
+    display: inline-block;
+    color: #fff;/*EBEBD3, C5283D*/
+    font-size: 55px;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  
+  #join_container{
+    width: 100%;
+    height: 200px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    float: left;
+    margin-top: 80px;
+  
+  }
+  #join_inner_container{
+    width: 50%;
+    height: 100%;
+  }
+  #join_input_container{
+    width: 100%;
+    height: 50px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    float: left;
+  }
+  #join_input{
+    width: 60%;
+    height: 40px;
+  
+    color: #1D3354;
+    font-family: Varela Round;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightblue;
+    border-bottom: 2px dashed #1D3354;
+  
+  }
+  #join_input:focus{
+    box-shadow: 0 10px 30px -17px #1D3354;
+  }
+  #join_button_container{
+    width: 100%;
+    height: 50px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    float: left;
+  }
+  #join_button{
+    width: 60%;
+    height: 40px;
+  
+    font-family: Varela Round;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #04161c;
+  }
+  
+  #chat_container{
+    width: 100%;
+    height: 600px;
+  
+    display: flex;
+    justify-content: center;
+  
+    float: left;
+    margin-top: 40px;
+    /* Fade in container */
+    animation: fadeIn 1s linear;
+  
+  }
+  #chat_inner_container{
+    width: 40%;
+    height: 100%;
+  }
+  #chat_content_container{
+    width: 100%;
+    height: 90%;
+  
+    float: left;
+    overflow-y: auto;
+    font-family: Varela Round;
+  
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #chat_input_container{
+    width: 100%;
+    height: 12%;
+  
+    float: left;
+    border-bottom: 4px dashed #1D3354;
+    background-color: Transparent;
+  
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Varela Round;
+    margin-top: 10px;
+  }
+  body{
+    background-image: url('../images/kp.jpg')
+  }
+  #chat_input {
+    width: 95%;
+    height: 100%;
+    float: left;
+    color: #1D3354;
+    font-size: 15px;
+    border: 1px solid #1D3354;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#chat_input:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+#chat_input:focus {
+    border-color: #4caf50; /* Change border color on focus */
+    background-color: #fff; /* Change background color on focus */
+}
+
+#chat_input::placeholder {
+    color: #9a9a9a; /* Placeholder text color */
+}
+
+#chat_input:disabled {
+    background-color: #dcb7b7; /* Background color when input is disabled */
+    color: #808080; /* Text color when input is disabled */
+}
+
+#chat_input[disabled]:hover {
+    cursor: not-allowed; /* Cursor style when input is disabled and hovered */
+}
+
+  #chat_input_send{
+    width: 5%;
+    height: 100%;
+    float: left;
+    font-size: 18px;
+    background-color: transparent;
+    text-align: right;
+    color:  #140101;
+  }
+  #chat_input_send.enabled{
+    color: rgb(40, 4, 142);
+    background-color: Transparent;
+    cursor: pointer;
+  
+  }
+  #chat_logout_container{
+    width: 100%;
+    display: inline-block;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* float: left; */
+    margin-top: 20px;
+  }
+  #chat_logout{
+    color: #efefef;
+    background-color: rgb(23, 4, 234);
+    cursor: pointer;
+    font-size: 30px;
+    font-family: Varela Round;
+    font-weight: bold;
+  }
+  #chat_logout:hover{
+    text-decoration: underline;
+  }
+  .message_container{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+  
+  }
+  .message_inner_container{
+    width: 100%;
+    display: inline-block;
+  
+    color: rgb(11, 28, 2);
+  }
+  .message_user_container{
+    width: 100%;
+    display: inline-block;
+  }
+  .message_user{
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .message_content_container{
+    width: 100%;
+    display: inline-block;
+  
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .message_content{
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .enabled{
+    transition: background-color 0.5s;
+    color: #8f1313;
+    background-color: #D64045; /*#5B7553;*/
+    cursor: pointer;
+  }
+  #title_container.chat_title_container{
+    transition: 0.8s;
+    transition-timing-function: ease-in-out;
+    height: 100px;
+  }
+  #title.chat_title{
+    transition: 0.8s;
+    font-size: 47px;
+  }
+  .loader_container{
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  
+    border-top: 6px solid #40a9d6;
+    border-bottom: 6px solid #1D3354;
+    border-left: 6px solid #E9FFF9;
+    border-right: 6px solid #E9FFF9;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes fadeIn {
+     0% {opacity: 0;}
+     100% {opacity: 1;}
+  }
+  @keyframes blur {
+    0% {filter: blur(5px);}
+    100% {}
+  }
+  ::selection {
+    background-color: #d9f11e;
+    color: #fff;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  /* Track */
+  /* ::-webkit-scrollbar-track {
+    background: #cccs;
+  } */
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4088d6;
+    border-radius: 5px;
+  }

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+      #modal1 {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    text-align: center;
+}
+
+h4 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fbc02d; /* Yellow darken-2 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#modal2 {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    text-align: center;
+}
+
+h4 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fbc02d; /* Yellow darken-2 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d2a900; /* Darker Yellow */
+}
+
+.btn.waves-effect.blue {
+    background-color: #2196F3; /* Blue */
+}
+
+.btn.waves-effect.blue:hover {
+    background-color: #0d47a1; /* Darker Blue */
+}
+
+
+#modal3 {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    text-align: center;
+}
+
+h4 {
+    color: #333;
+}
+
+.file-field {
+    margin-top: 20px;
+}
+
+/* .file-field input {
+    display: none;
+} */
+
+
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #fbc02d; /* Yellow darken-2 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d2a900; /* Darker Yellow */
+}
+
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#proimg {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #fbc02d; /* Yellow darken-2 */
+    color: #fff;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: #f9f9f9; /* Alternating row color */
+}
+
+tbody tr:hover {
+    background-color: rgb(93, 236, 105); /* Hover effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base styles for the navigation bar */
+nav {
+    background-color: rgb(65, 207, 30); /* Yellow darken-2 */
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.brand-logo {
+    color: #fff;
+    font-size: 1000em;
+    text-decoration: none;
+}
+
+#nav-mobile {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-mobile li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#nav-mobile a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Hover box styles */
+#nav-mobile a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+#nav-mobile a:hover::before {
+    width: 100%;
+}
+
+/* Responsive styles using media queries */
+@media only screen and (max-width: 768px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    #nav-mobile li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80');
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .center {
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.circle {
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#proimg:hover {
+  
+  transform: scale(1.1); /* Example: Enlarge the image on hover */
+}
+
+.userDetails {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Example: Add a subtle box shadow and transition on hover for user details */
+.userDetails:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+
+
+
+
+.userDetails {
+  width: 40%;
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* footer {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+}
+
+footer h3 {
+  margin: 0;
+  color: #333;
+} */
+
+
+
+/* .userDetails{
+  width: 60%;
+  justify-content: center;
+} */
+
+
+h5 {
+  text-align: center;
+  margin: 0;
+  color: #333;
+  justify-content: center;
+}
+
+
+
+
+.collection {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collection-item {
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.collection-item h4 {
+  margin: 0;
+  color: #333;
+}
+
+.collection-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.collection-item a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper #fbc02d yellow darken-2">
+          <!-- <a href="../../index.html" class="brand-logo">Project Hub</a> -->
+          <ul id="nav-mobile" class="right">
+            <li><a href="../../index.html" class="brand-logo">Project Hub</a> </li>
+            <li id="chat"><a href="../../chat/index.html">Discussion</a></li>
+            <li id ="project"><a href="../../project/index.html">Projects</a></li>
+            <li id="loginli"><a class="modal-trigger" href="#modal2">Login</a></li>
+            <li  id="signupli"><a class="modal-trigger" href="#modal1">Signup</a></li>
+            <li  id="logoutli"><a onclick="logout()">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    <!--Signup Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Signup</h4>
+      <form autocomplete="off" onsubmit="signup(event)">
+        <input type="email" id="signupEmail" placeholder="email" />
+        <input type="password" id="signupPassword" placeholder="password" />
+        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
+      </form>
+       <button class="btn waves-effect blue" onclick="loginWithGoogle()">Login with google</button>
+      
+     
+    </div>
+  </div>
+         
+    <!--login Modal -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+      <form id="log-in" autocomplete="off" onsubmit="login(event)">
+        <input type="email" id="loginEmail" placeholder="email" />
+        <input type="password" id="loginPassword" placeholder="password" />
+        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
+      </form>
+      <button class="btn waves-effect blue" onclick="loginWithGoogle()">Login with google</button>
+      
+     
+    </div>
+  </div>
+    <!--edit profile -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Edit your details</h4>
+      <div class="file-field input-field">
+        <div class="btn #fbc02d yellow darken-2">
+          <span>File</span>
+          <input type="file" accept="image/*" onchange="uploadImage(event)" />
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
+        <input type="email" name="profileEmail" placeholder="email" />
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="phoneno" placeholder="Phone Number" />
+        <input type="text" name="specialty" placeholder="Speciality" />
+        <input type="text" name="prorfolioUrl" placeholder="Protfolio url" />
+        <input type="text" name="experience" placeholder="Experience" />
+
+        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
+      </form>
+  
+      
+     
+    </div>
+  </div>
+
+
+  <div class="center">
+    <!-- <h1>User Profile</h1> -->
+    <a class="modal-trigger" href="#modal2"><img id="proimg" class="circle" src="./assets/noimage.png" alt="noimage" style="width: 30%;height: 10%;" /> </a>
+    
+    <div class="userDetails"></div>
+  </div>
+
+
+
+  
+         
+  <table id="table">
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Speciality</th>
+          <th>Experience</th>
+          <th>portfolio</th>
+      </tr>
+    </thead>
+
+    <tbody id="tbody">
+     
+    </tbody>
+  </table>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+</script>  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+  apiKey: "AIzaSyA2E_GfzCq-Y2h8Y9gz_512YBw3kKAaDhQ",
+  authDomain: "mini-project-bhuvan.firebaseapp.com",
+  databaseURL: "https://mini-project-bhuvan-default-rtdb.firebaseio.com",
+  projectId: "mini-project-bhuvan",
+  storageBucket: "mini-project-bhuvan.appspot.com",
+  messagingSenderId: "26224730532",
+  appId: "1:26224730532:web:3ab85ea12838e7b6256131",
+  measurementId: "G-36YTXBERTY"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
+<script src="./scripts/auth.js"></script>
+<script src="./scripts/firestore-db.js" ></script>
+<script>
+  
+  window.addEventListener('load', allUserDetails());
+</script>
+</body>
+</html>
+
