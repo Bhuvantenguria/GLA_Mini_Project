@@ -4,7 +4,7 @@ Mini Project with all proper details and documentation
 
 Contains :
 
--> Presentation .
+-> Presentation.
 -> Report.
 -> Project Video.
 -> Project Zip File.
