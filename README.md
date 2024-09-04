@@ -2,7 +2,7 @@
 
 Mini Project with all proper details and documentation
 
-Contains :
+## Contains :
 
 - Presentation
 - Report
