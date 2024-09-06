@@ -3,7 +3,6 @@
 Mini Project with all proper details and documentation.
 
 ## Contains 
-
 - Presentation
 - Report
 - Demo Video
